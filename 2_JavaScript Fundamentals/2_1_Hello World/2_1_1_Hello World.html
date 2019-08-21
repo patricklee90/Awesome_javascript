@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<!--External Script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js"></script>
+<body>
+
+  <p>Before the script...</p>
+	
+<!--Internal Script-->
+  <script>
+    alert( 'Hello, world!' );
+  </script>
+  
+<!--If src is set, the script content is ignored.-->
+<script src="file.js">
+  alert(1); // the content is ignored, because src is set
+</script>
+
+<!--But can split to two-->
+<script src="file.js"></script>
+<script>
+  alert(1);
+</script>
+
+  <p>...After the script.</p>
+
+</body>
+
+</html>
